@@ -1,4 +1,3 @@
-
 version: '3.2'
 services:
   dockerized:
@@ -17,7 +16,9 @@ services:
       # cache installed packages and (including scripts) in a volume
       - site-packages:/usr/local/lib/python3.8/site-packages
       - local-bin:/usr/local/bin
+      - virtualenvs:/root/.local/share/virtualenvs/
 
 volumes:
   site-packages: {}
   local-bin: {}
+  virtualenvs: {}
